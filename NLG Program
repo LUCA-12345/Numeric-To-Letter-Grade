@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+char letterGrade (double);
+
+int main ()
+{
+
+    double grade1, grade2, grade3; 
+    
+
+    cout << "This program converts numeric grades into";
+    cout << "letter grades using a 10-point scale." << endl; 
+
+    cout << "Enter Grade 1: ";
+    cin >> grade1;
+    cout << "Enter Grade 2: ";
+    cin >> grade2;
+    cout << "Enter Grade 3: ";
+    cin >> grade3;
+
+    cout << endl << "Final Grades: " << endl;
+    cout << letterGrade(grade1) << endl;
+    cout << letterGrade(grade2) << endl;
+    cout << letterGrade(grade3) << endl;
+    
+
+
+    return 0;
+}
+
+char letterGrade (double grade) //Convert Number Grade To Letter
+{
+    if (grade >= 89.5)
+        return 'A' ;
+    else if (grade >= 79.5)
+        return 'B' ;    
+    else if (grade >= 69.5)
+        return 'C' ; 
+    else if (grade >= 59.5)
+        return 'D' ; 
+    else
+        return 'F' ;                 
+}
